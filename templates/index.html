@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini Travel Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gemini Travel Assistant</h1>
+            <p>Discover points of interest in cities around the world</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <h2>What would you like to know?</h2>
+                <textarea id="prompt-input" placeholder="Try: 'What can I visit in Paris?' or 'Show me attractions in Tokyo'"></textarea>
+                <div class="controls">
+                    <button id="generate-btn">Find Points of Interest</button>
+                    <div class="spinner" id="loading-spinner"></div>
+                </div>
+            </div>
+
+            <div class="response-section">
+                <h2>Travel Recommendations:</h2>
+                <div id="response-container">
+                    <p class="placeholder">Your travel suggestions will appear here...</p>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Google's Gemini API with Points of Interest Tool</p>
+            <div id="model-info">
+                Loading model information...
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
